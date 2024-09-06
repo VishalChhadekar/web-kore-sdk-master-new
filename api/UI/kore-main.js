@@ -1,4 +1,4 @@
-(function($){
+(function ($) {
 
     $(document).ready(function () {
         function assertion(options, callback) {
@@ -42,7 +42,7 @@
                     type: 'get',
                     dataType: 'json',
                     success: function (data) {
-                        if(koreBot && koreBot.applySDKBranding) {
+                        if (koreBot && koreBot.applySDKBranding) {
                             koreBot.applySDKBranding(data);
                         }
                         if (koreBot && koreBot.initToken) {
@@ -56,12 +56,25 @@
             }
 
         }
-        function onJWTGrantSuccess(options){
+        function onJWTGrantSuccess(options) {
             getBrandingInformation(options);
         }
-        var chatConfig=window.KoreSDK.chatConfig;
-        chatConfig.botOptions.assertionFn=assertion;
+        var chatConfig = window.KoreSDK.chatConfig;
+        chatConfig.botOptions.assertionFn = assertion;
         chatConfig.botOptions.jwtgrantSuccessCB = onJWTGrantSuccess;
+
+        var myCustomData = { "customInitialLanguage": "Hindi" };//this is the global object - it will need to be chaged as per the page changes.
+
+        chatConfig.botOptions.botInfo.customDataFn = function () {
+            return myCustomData;
+        }
+
+        window.captureClick = function (serviceType) {
+            myCustomData.selectedService = serviceType;
+        }
+        window.captureLogout = function () {
+            myCustomData.page = "Logout";
+        }
         var koreBot = koreBotChat();
         koreBot.show(chatConfig);
         $('.openChatWindow').click(function () {
