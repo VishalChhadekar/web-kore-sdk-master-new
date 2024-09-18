@@ -862,8 +862,8 @@
     /* //new button style */
     /* border: 1px solid red; */
     border-radius: 10px;
-    box-shadow: #175CD3;
-    box-shadow: inset 0px 0px 5px 0px #175CD3;
+    box-shadow: #21bcbe;
+    box-shadow: inset 0px 0px 3px 0px #21bcbe;
 }
 
 .kore-chat-window ul.chat-container li {
