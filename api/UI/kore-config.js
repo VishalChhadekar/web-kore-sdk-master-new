@@ -1,7 +1,5 @@
 (function (KoreSDK) {
-
     var KoreSDK = KoreSDK || {};
-
     var botOptions = {};
     botOptions.logLevel = 'debug';
     botOptions.koreAPIUrl = "https://bots.kore.ai/api/";
@@ -23,7 +21,7 @@
     botOptions.JWTUrl = "https://jwt-service-provider.vercel.app/api/users/sts";
     botOptions.userIdentity = 'vishal.chhadekar@aionos.ai';// Provide users email id here
     botOptions.botInfo = {
-        name: "FindMeFlight", "_id": "st-04557a8f-068a-5cd2-8fcc-abed5905e7a1", "customData": {
+        name: "Travel Mate", "_id": "st-72d027e7-20a7-5bf0-a834-822c14a2cf49", "customData": {
             "myinitialLanguageInKoreConfig": "English"
         }
     }; // bot name is case sensitive
@@ -33,8 +31,8 @@
     Refer below document for JWT token generation at server side. Client Id and Client secret should maintained at server end.
     https://developer.kore.ai/docs/bots/sdks/user-authorization-and-assertion/
     **/
-    botOptions.clientId = "cs-b52b989d-e2cd-5726-aa13-0ef276d35e4e";
-    botOptions.clientSecret = "RRv4fuQOyo0IcG3bixYtWf1EGK2dtfFw/Y7Jl6Qpucg=";
+    botOptions.clientId = "cs-460af7cd-dc87-5d7a-aca9-f26e08245348";
+    botOptions.clientSecret = "udKYFVaD55XjyWZS9WUndIZLizvXeujmyj4KLfQrsIM=";
     botOptions.brandingAPIUrl = botOptions.koreAPIUrl + 'websdkthemes/' + botOptions.botInfo._id + '/activetheme';
     botOptions.enableThemes = true;
     // for webhook based communication use following option 

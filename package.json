@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Koredotcom/web-kore-sdk#readme",
   "dependencies": {
+    "bootstrap": "^4.6.2",
+    "dotenv": "^16.4.5",
     "express": "~4.9.0"
   }
 }
