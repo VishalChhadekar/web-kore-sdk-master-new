@@ -949,7 +949,8 @@
     animation: message-right ease-in-out 2s forwards;
     word-wrap: break-word;
     /* Outbound msg */
-    background: #7A271A;
+    /* background: #7A271A; */
+    background: #21bcbe;
     /* background: #175CD3; */
     color: white;
     border-radius: 10px;
@@ -996,7 +997,8 @@
     display: inline-block;
     word-wrap: break-word;
     /* Inbound msg */
-    background: #FEE4E2;
+    background: #f6f6f6;    ;
+    /* background: #FEE4E2; */
     /* background: #EAECF0; */
     color: black;
     border-radius: 10px;
@@ -1899,6 +1901,7 @@
     white-space: nowrap;
     overflow: hidden;
     margin: 8px 0px 0px 11px;
+    color: #333333;
 }
 
 .kore-chat-window .carouselTitleBox .carouselDescription {
@@ -1927,14 +1930,21 @@
     height: 48px;
     background-color: transparent;
     border-top: solid 1px var(--sdk-chat-widow-primary-border-color);
-    font-size: 15px;
+    font-size: 13px;
     letter-spacing: -0.3px;
     text-align: center;
     line-height: 1.54;
     color: #0076ff;
     cursor: pointer;
-    max-width: 242px;
-    padding-top: 13px;
+    max-width: 226px;
+    padding-top: 10px;
+    /* background: #7A271A; */
+    background: #21bcbe;
+    border-radius: 10px;
+    font-weight: 400;
+    color: #fff;
+    height: 40px;
+    margin: 10px;
 }
 
 .kore-chat-window .purejscarousel-btn {
