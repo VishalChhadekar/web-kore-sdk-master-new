@@ -1360,6 +1360,24 @@
                 me.bot.init(me.config.botOptions);
             };
 
+            //Custom Context passing logic
+            // var myCustomData = { "customInitialLanguage": "Hindi" };
+            // window.passLogin = function () {
+            //     debugger
+            //     myCustomData.user = 'vishalchhadekar';
+            // }
+            SendMessageToBot = function () {
+                debugger
+                var messageToBot = {};
+                messageToBot["message"] = { body: "auto-update-context", customdata: myCustomData }; // The body contains the message to trigger the dialog
+                messageToBot["resourceid"] = '/bot.message';
+                messageToBot["clientMessageId"] = new Date().getTime(); // Use timestamp as a unique ID
+                // Send the message to the bot
+                bot.sendMessage(messageToBot, function messageSent() {
+                    console.log("Message sent to bot successfully!", messageToBot);
+                });
+            }
+
             chatWindow.prototype.bindEvents = function () {
                 var me = this;
                 me.bindCustomEvents();

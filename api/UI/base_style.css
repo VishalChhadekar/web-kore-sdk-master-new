@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Navbar */
+nav {
+    background-color: #003366;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section with Video */
+.hero {
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+/* Services Section */
+.services {
+    padding: 3em;
+    background-color: white;
+    text-align: center;
+}
+
+.services h2 {
+    color: #003366;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+
+.service {
+    width: 30%;
+    padding: 1em;
+    background-color: #e6f2ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    color: #003366;
+}
+
+/* Chatbot Section */
+.chatbot {
+    padding: 2em;
+    text-align: center;
+    background-color: #003366;
+    color: white;
+}
+
+.chatbot button {
+    padding: 1em 2em;
+    background-color: #ff9900;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}

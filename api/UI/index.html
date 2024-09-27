@@ -3,29 +3,7 @@
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=1.0">
-	<!--Newly Added  -->
 	<meta charset="UTF-8">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
-	<!-- <title>Airlines Aviation Services</title> -->
-	<link rel='stylesheet' id='bootstrap-css' href='bootstrap-4.0.0/css/bootstrap.min.css' type='text/css'
-		media='all' />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/css/all.css">
-	<link rel='stylesheet' id='font-awesome-css'
-		href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' type='text/css'
-		media='all' />
-	<link rel='stylesheet' id='google-fonts-css'
-		href='https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&#038;subset=latin%2Clatin-ext'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='owl-carousel-css' href='bootstrap-4.0.0/css/owl.carousel.min.css' type='text/css'
-		media='all' />
-	<link rel='stylesheet' id='fancybox-css-css' href='bootstrap-4.0.0/css/jquery.fancybox.min.css' type='text/css'
-		media='all' />
-	<link rel='stylesheet' id='airlinesaviationservices-style-css' href='bootstrap-4.0.0/css/style.css' type='text/css'
-		media='all' />
-	<script type='text/javascript' src='bootstrap-4.0.0/js/jquery.js'></script>
-	<script type='text/javascript' src='bootstrap-4.0.0/js/jquery-migrate.min.js'></script>
-	<!--  -->
 	<script src="libs/kore-no-conflict-start.js" type="text/javascript"></script>
 	<script src="libs/jquery.js" type="text/javascript"></script>
 	<script src="libs/jquery.tmpl.min.js" type="text/javascript"></script>
@@ -69,107 +47,13 @@
 	<script src="kore-config.js" type="text/javascript"></script>
 	<script src="kore-main.js" type="text/javascript"></script>
 	<script src="libs/kore-no-conflict-end.js" type="text/javascript"></script>
+	<script src="../UI/auth/auth.js" type="text/javascript"></script>
 	<!-- Commented default chatwindow -->
-	<!-- <script src="chatWindow.js" type="text/javascript"></script>
-	 <link href="chatWindow.css" rel="stylesheet"> -->
-	<title>Airline Services</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-			background-color: #f0f0f0;
-		}
 
-		/* Navbar */
-		nav {
-			background-color: #003366;
-			color: white;
-			padding: 1em;
-			text-align: center;
-		}
-
-		nav a {
-			color: white;
-			margin: 0 15px;
-			text-decoration: none;
-			font-weight: bold;
-		}
-
-		/* Hero Section */
-		.hero {
-			background: url('../UI/images/hero.jpg') no-repeat center center/cover;
-			height: 400px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			color: white;
-			text-align: center;
-		}
-
-		.hero h1 {
-			font-size: 3em;
-		}
-
-		.hero p {
-			font-size: 1.5em;
-		}
-
-		/* Services Section */
-		.services {
-			padding: 3em;
-			background-color: white;
-			text-align: center;
-		}
-
-		.services h2 {
-			color: #003366;
-		}
-
-		.services-container {
-			display: flex;
-			justify-content: space-around;
-			margin-top: 2em;
-		}
-
-		.service {
-			width: 30%;
-			padding: 1em;
-			background-color: #e6f2ff;
-			border-radius: 10px;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-		}
-
-		.service h3 {
-			color: #003366;
-		}
-
-		/* Chatbot Section */
-		.chatbot {
-			padding: 2em;
-			text-align: center;
-			background-color: #003366;
-			color: white;
-		}
-
-		.chatbot button {
-			padding: 1em 2em;
-			background-color: #ff9900;
-			border: none;
-			color: white;
-			font-size: 1.2em;
-			border-radius: 5px;
-			cursor: pointer;
-		}
-
-		/* Footer */
-		footer {
-			background-color: #003366;
-			color: white;
-			padding: 1em;
-			text-align: center;
-		}
-	</style>
+	<!--  <link href="chatWindow.css" rel="stylesheet"> -->
+	<!-- <script src="chatWindow.js" type="text/javascript"></script> -->
+	<title>Orbital Airlines</title>
+	<link rel="stylesheet" href="base_style.css">
 </head>
 
 
@@ -178,14 +62,21 @@
 	<nav>
 		<a href="#home">Home</a>
 		<a href="#services">Services</a>
-		<a href="#chatbot">Chat with Us</a>
+		<a href="/UI/auth/index.html">Login</a>
+		<!-- <a href="/UI/auth/index.html" onclick="logoutUser()">Logout</a> -->
+		<!-- <button class="logout-button" onclick="logoutUser()">Logout</button> -->
 		<a href="#contact">Contact</a>
 	</nav>
 
-	<!-- Hero Section -->
+
+	<!-- Hero Section with Video -->
 	<div class="hero">
-		<div>
-			<h1>Welcome to SkyHigh Airlines</h1>
+		<video autoplay muted loop>
+			<source src="../UI/images/airbg_video.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		<div class="hero-content">
+			<h1>Welcome to Orbital Airlines</h1>
 			<p>Your journey, our priority!</p>
 		</div>
 	</div>
@@ -218,10 +109,11 @@
 
 	<!-- Adding kore.ai Bot UI -->
 	<script src='https://cdn.jsdelivr.net/npm/kore-web-sdk@11.5.1/dist/umd/kore-web-sdk-umd-chat.min.js'></script>
-	<script> KoreChatSDK.chatConfig.botOptions.API_KEY_CONFIG.KEY = 'e003cefbf1fe47fbb03b52397acad041e42d33ee8d034651803013c4c14884c5ste7'; new KoreChatSDK.chatWindow().show(KoreChatSDK.chatConfig); </script>
+	<script> KoreChatSDK.chatConfig.botOptions.API_KEY_CONFIG.KEY = 'fc00bb941ee3492090564b4762b276bd27fe8b2a13904717b865d33ae08bb73cst71'; new KoreChatSDK.chatWindow().show(KoreChatSDK.chatConfig); </script>
+
 	<!-- Footer -->
 	<footer>
-		<p>&copy; 2024 SkyHigh Airlines. All Rights Reserved.</p>
+		<p>&copy; 2024 Orbital Airlines. All Rights Reserved.</p>
 	</footer>
 
 
