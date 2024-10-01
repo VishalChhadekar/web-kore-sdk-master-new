@@ -13,7 +13,7 @@ function loginUser(event) {
 
         // Redirect to the dashboard or homepage after successful login
         // SendMessageToBot()
-        window.location.href = 'http://localhost:8080/UI/index.html';
+        window.location.href = 'https://web-kore-sdk-master-new.onrender.com/UI/index.html';
 
         // Show welcome message and hide login form
         // document.getElementById('welcome-message').innerText = `Welcome, ${username}!`;
@@ -42,7 +42,7 @@ function checkLoginStatus() {
         // User is already logged in
 
         // Redirect to the dashboard or homepage after successful login
-        window.location.href = 'http://localhost:8080/UI/index.html';
+        window.location.href = 'https://web-kore-sdk-master-new.onrender.com/UI/index.html';
         // document.getElementById('welcome-message').innerText = `Welcome, ${loggedInUser}!`;
         // document.getElementById('login-container').style.display = 'none';
         // document.getElementById('welcome-section').style.display = 'block';
