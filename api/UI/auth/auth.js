@@ -12,7 +12,7 @@ function loginUser(event) {
         localStorage.setItem('loggedInUser', username);
 
         // Redirect to the dashboard or homepage after successful login
-        SendMessageToBot()
+        // SendMessageToBot()
         window.location.href = 'http://localhost:8080/UI/index.html';
 
         // Show welcome message and hide login form

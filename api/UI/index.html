@@ -63,7 +63,7 @@
 		<a href="#home">Home</a>
 		<a href="#services">Services</a>
 		<a href="/UI/auth/index.html">Login</a>
-		<!-- <a href="/UI/auth/index.html" onclick="logoutUser()">Logout</a> -->
+		<a href="/UI/auth/index.html" onclick="logoutUser()">Logout</a>
 		<!-- <button class="logout-button" onclick="logoutUser()">Logout</button> -->
 		<a href="#contact">Contact</a>
 	</nav>
@@ -108,8 +108,40 @@
 	</section>
 
 	<!-- Adding kore.ai Bot UI -->
-	<script src='https://cdn.jsdelivr.net/npm/kore-web-sdk@11.5.1/dist/umd/kore-web-sdk-umd-chat.min.js'></script>
-	<script> KoreChatSDK.chatConfig.botOptions.API_KEY_CONFIG.KEY = 'fc00bb941ee3492090564b4762b276bd27fe8b2a13904717b865d33ae08bb73cst71'; new KoreChatSDK.chatWindow().show(KoreChatSDK.chatConfig); </script>
+	<!-- <script src='https://cdn.jsdelivr.net/npm/kore-web-sdk@11.5.1/dist/umd/kore-web-sdk-umd-chat.min.js'></script>
+	<script> KoreChatSDK.chatConfig.botOptions.API_KEY_CONFIG.KEY = 'fc00bb941ee3492090564b4762b276bd27fe8b2a13904717b865d33ae08bb73cst71'; new KoreChatSDK.chatWindow().show(KoreChatSDK.chatConfig); </script> -->
+	<script type="text/javascript">
+		// Get email from localStorage
+		const userEmail = localStorage.getItem('loggedInUser') || 'default-email@example.com'; // Replace with a default email if needed
+		console.log("userEmail: ", userEmail)
+		window.ymConfig = {
+			"bot": "x1712051921491", "host": "https://r4.cloud.yellow.ai", "payload": {
+				"name": "YellowDemo1",             // Add payload data here
+				"phoneNumber": "08123546465",      // The values can be dynamic
+				"email": userEmail,
+			},
+		};
+		(function () {
+			var w = window,
+				ic = w.YellowMessenger;
+			if ("function" === typeof ic) ic("reattach_activator"), ic("update", ymConfig);
+			else {
+				var d = document,
+					i = function () {
+						i.c(arguments)
+					};
+				function l() {
+					var e = d.createElement("script");
+					e.type = "text/javascript", e.async = !0, e.src = "https://cdn.yellowmessenger.com/plugin/widget-v2/latest/dist/main.min.js";
+					var t = d.getElementsByTagName("script")[0];
+					t.parentNode.insertBefore(e, t)
+				}
+				i.q = [], i.c = function (e) {
+					i.q.push(e)
+				}, w.YellowMessenger = i, w.attachEvent ? w.attachEvent("onload", l) : w.addEventListener("load", l, !1)
+			}
+		})();
+	</script>
 
 	<!-- Footer -->
 	<footer>
